@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z Index and CSS3</title>
+
+    <style>
+:root{
+    --primary-color: purple;
+    --secondary-color: hotpink;
+}
+
+div{
+    height: 250px;
+    width: 250px;
+}
+    
+  #div1{
+    /*background-color: black;*/
+    background: var(--primary-color);
+    position: absolute;
+    z-index: 1;
+    
+  }
+
+  #div2{
+    /*background-color: red;*/
+    background: var(--secondary-color);
+    position: absolute;
+    left: 150px;
+    top: 150px;
+    z-index: -2;
+  }
+
+  @media  screen and (max-widht: 600px) {
+    :root{
+        --primary-color:black;
+        --secondary-color:green;
+    }
+    
+  }
+    </style>
+</head>
+<body>
+   <div id="div1"></div>
+   <div id="div2"></div>
+</body>
+</html>
+
+<!--Z index only works at position.it can be both negative and positive-->
